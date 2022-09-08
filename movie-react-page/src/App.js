@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import {useState } from 'react';
 
 function App() {
   const [toDo, setToDo] = useState("");
@@ -11,7 +11,6 @@ function App() {
     setToDos(currentArray => [toDo, ...currentArray])
     setToDo("");
   }
-  console.log(toDos);
   return (
     <>
     <h1>My To Dos({toDos.length})</h1>
