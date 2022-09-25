@@ -6,12 +6,12 @@ const Home = () => {
     const [loading, setLoading] = useState(true);
     const [movies,  setMovies] = useState([]);
     const getMoivies = async () => {
-      const response = await (await fetch(`https://yts.mx/api/v2/list_movies.json?minimum_rating=9&sort_by=year`)).json()
-      setMovies(response.data.movies)
-      setLoading(false)
+      const response = await (await fetch(`https://yts.mx/api/v2/list_movies.json?minimum_rating=9&sort_by=year`)).json();
+      setMovies(response.data.movies);
+      setLoading(false);
     }
     useEffect(() => {
-      // * https://yts.mx/api 
+      // * https://yts.mx/api
       getMoivies();
     },[])
     return (
